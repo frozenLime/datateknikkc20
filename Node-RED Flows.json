@@ -1,0 +1,6273 @@
+[
+    {
+        "id": "d317f4c3b9f44b9e",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f329b30477b3c4ad",
+        "type": "tab",
+        "label": "Sensor panel",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "43fabd88ca271808",
+        "type": "tab",
+        "label": "Inputs",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9544cff3487df065",
+        "type": "tab",
+        "label": "Ladestasjon/Verksted",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f42776056cd8d9cf",
+        "type": "tab",
+        "label": "Skole/Jobb",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "10e78a89.5b4fd5",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "e7c46d5e.a1283",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "12e03c5ea3fe2eac",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Century Gothic,CenturyGothic,AppleGothic,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "bf0531d47df04951",
+        "type": "ui_group",
+        "name": "Dashboard",
+        "tab": "e7c46d5e.a1283",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0595dd1fb499a4f6",
+        "type": "ui_tab",
+        "name": "Sensor panel",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "46034e0b7f87d5e3",
+        "type": "ui_group",
+        "name": "Temp",
+        "tab": "0595dd1fb499a4f6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c2117c82f3745131",
+        "type": "ui_group",
+        "name": "Hum",
+        "tab": "0595dd1fb499a4f6",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c701595e67cd5781",
+        "type": "ui_group",
+        "name": "Light level",
+        "tab": "0595dd1fb499a4f6",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0c1ab7878578bc06",
+        "type": "ui_group",
+        "name": "Distance",
+        "tab": "0595dd1fb499a4f6",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8c63581785fdd9e5",
+        "type": "ui_tab",
+        "name": "Inputs",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a619f971a1451f15",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "8c63581785fdd9e5",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "a82dadf7ef257e69",
+        "type": "ui_tab",
+        "name": "Ladestasjon/Verksted",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1d48aa81cd159a7c",
+        "type": "ui_group",
+        "name": "Info",
+        "tab": "a82dadf7ef257e69",
+        "order": 1,
+        "disp": true,
+        "width": "26",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7038cf49c498b456",
+        "type": "ui_group",
+        "name": "Ladevalg",
+        "tab": "a82dadf7ef257e69",
+        "order": 2,
+        "disp": true,
+        "width": "13",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1ae1b7337644226a",
+        "type": "ui_group",
+        "name": "Ladeprosses",
+        "tab": "a82dadf7ef257e69",
+        "order": 3,
+        "disp": false,
+        "width": "13",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "12f08883259b40f2",
+        "type": "ui_group",
+        "name": "Reperasjonvalg",
+        "tab": "a82dadf7ef257e69",
+        "order": 5,
+        "disp": true,
+        "width": 13,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ea860dbaa63e3fb0",
+        "type": "ui_group",
+        "name": "Filler1",
+        "tab": "a82dadf7ef257e69",
+        "order": 4,
+        "disp": false,
+        "width": "13",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "417a525f70d10cc6",
+        "type": "ui_group",
+        "name": "Solpanel",
+        "tab": "0595dd1fb499a4f6",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ccd46116e7801f42",
+        "type": "ui_spacer",
+        "z": "f329b30477b3c4ad",
+        "name": "spacer",
+        "group": "0c1ab7878578bc06",
+        "order": 2,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "06c295381ed53e36",
+        "type": "ui_spacer",
+        "z": "f329b30477b3c4ad",
+        "name": "spacer",
+        "group": "0c1ab7878578bc06",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "aedf344aa5990a36",
+        "type": "ui_group",
+        "name": "reperasjonProsses",
+        "tab": "a82dadf7ef257e69",
+        "order": 7,
+        "disp": false,
+        "width": "13",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5896a6ded449cbe4",
+        "type": "ui_group",
+        "name": "Filler2",
+        "tab": "a82dadf7ef257e69",
+        "order": 6,
+        "disp": false,
+        "width": "13",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3440f590a4b13f25",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "7038cf49c498b456",
+        "order": 3,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "bfa1c2127466562a",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "7038cf49c498b456",
+        "order": 10,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "860b4b2ccac98a41",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 1,
+        "width": 13,
+        "height": 1
+    },
+    {
+        "id": "7ca51dee37574d12",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 2,
+        "width": 13,
+        "height": 1
+    },
+    {
+        "id": "6e680184672ca048",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "78bc20f3a8d8cdca",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 5,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "3d20ed0de3f3003d",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b0ca4f7a5a70fcb6",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "af56404642355886",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "356be7204ba9becc",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "cd75d0e7f37856a9",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "6aaeb0f5b0a3ba21",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "2ed230130db5afe8",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 12,
+        "width": 13,
+        "height": 1
+    },
+    {
+        "id": "51d42a5819ae8e2e",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 13,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "6a4e33076d7ebe5d",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "1ae1b7337644226a",
+        "order": 15,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ba4bf018f760d732",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "12f08883259b40f2",
+        "order": 7,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "84668e291e80a2dd",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 1,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "a7956614de0c7f80",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "e88a682d2b58da45",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "31fa1304db97effb",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "e015d10cbf4276b7",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "3b0ae6c6a14a8caa",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 7,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "3e85b142692849b5",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 8,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "6366d90b869459e5",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 9,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "ab87e66943e298bb",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 10,
+        "width": 13,
+        "height": 1
+    },
+    {
+        "id": "31b2b6a16f120136",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 11,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "bafc5922299f7f27",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "aedf344aa5990a36",
+        "order": 13,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "81b1cca532a05409",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "ea860dbaa63e3fb0",
+        "order": 4,
+        "width": "13",
+        "height": "8"
+    },
+    {
+        "id": "15408c912272bdd9",
+        "type": "ui_spacer",
+        "z": "9544cff3487df065",
+        "name": "spacer",
+        "group": "5896a6ded449cbe4",
+        "order": 7,
+        "width": "13",
+        "height": "6"
+    },
+    {
+        "id": "0c37bd6e278c1189",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 2,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "1ce08b4f5b76cadc",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 5,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "e68433ee184713a9",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "0f6c6d9e16892ddb",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 8,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "844d9f6494f54149",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 9,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "19d089ec17dad6e5",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 10,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c3d2d7050f63922c",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 11,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "d94a044eeffbab41",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 12,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "cc11cd20363e5802",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 13,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "33d67cdbda009f84",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 14,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "f75e53da4772ed53",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 15,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "e0f592f0fff3d412",
+        "type": "ui_spacer",
+        "z": "d317f4c3b9f44b9e",
+        "name": "spacer",
+        "group": "bf0531d47df04951",
+        "order": 17,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "36c0b711601af4c6",
+        "type": "ui_tab",
+        "name": "Skole/Jobb",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3003ecd6e613b681",
+        "type": "ui_group",
+        "name": "Skole",
+        "tab": "36c0b711601af4c6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "41e249693650a1d4",
+        "type": "ui_group",
+        "name": "Jobb",
+        "tab": "36c0b711601af4c6",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4bcd2bc283fbb818",
+        "type": "ui_gauge",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "group": "bf0531d47df04951",
+        "order": 3,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Batteri",
+        "label": "%",
+        "format": "{{value | number: 1}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "40b59dea6c9dc13f",
+        "type": "ui_text",
+        "z": "d317f4c3b9f44b9e",
+        "group": "bf0531d47df04951",
+        "order": 1,
+        "width": 12,
+        "height": 2,
+        "name": "",
+        "label": "Current balance:",
+        "format": "{{value | number: 0}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 770,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8feeca0f08bb5ec8",
+        "type": "ui_gauge",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "group": "bf0531d47df04951",
+        "order": 4,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Battery health",
+        "label": "%",
+        "format": "{{value | number: 1}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 760,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2ea1fe8b62a944fb",
+        "type": "mqtt in",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "topic": "verksted",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 300,
+        "wires": [
+            [
+                "acd385c22b6dec37"
+            ]
+        ]
+    },
+    {
+        "id": "acd385c22b6dec37",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 21",
+        "func": "if (msg.topic == \"verksted\") {\n    if (msg.payload.batteryHealth) {\n        msg.payload = msg.payload.batteryHealth;\n        return msg;\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 300,
+        "wires": [
+            [
+                "8feeca0f08bb5ec8"
+            ]
+        ]
+    },
+    {
+        "id": "b1323f4866ec097f",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 22",
+        "func": "if (msg.topic == \"ladestasjon\") {\n    if (msg.payload.current_Charge) {\n        msg.payload = msg.payload.current_Charge;\n        return msg;\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 340,
+        "wires": [
+            [
+                "4bcd2bc283fbb818"
+            ]
+        ]
+    },
+    {
+        "id": "1f146fc88da6ebfa",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 29",
+        "func": "if (msg.topic == \"saldo\") {\n    msg.payload = msg.payload.saldo;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 260,
+        "wires": [
+            [
+                "40b59dea6c9dc13f"
+            ]
+        ]
+    },
+    {
+        "id": "a8b6056e49be9be1",
+        "type": "ui_gauge",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "group": "bf0531d47df04951",
+        "order": 7,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Speedometer",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 780,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "0623339b79f65786",
+        "type": "comment",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Trenger også snitt, makshastighet og antall sek over 70% av makshastighet(pr. 60 sek)",
+        "info": "",
+        "x": 560,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "86c8ab30557ee29e",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Hastighet",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fullmessage",
+        "payload": "{\"hastighet\": 30}",
+        "payloadType": "json",
+        "x": 300,
+        "y": 1000,
+        "wires": [
+            [
+                "1e0eda82799c2c2e"
+            ]
+        ]
+    },
+    {
+        "id": "98919daee35e1da0",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "antall ladninger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fullmessage",
+        "payload": "{\"antallLadninger\": 30}",
+        "payloadType": "json",
+        "x": 280,
+        "y": 1040,
+        "wires": [
+            [
+                "b2ff6815568773b6"
+            ]
+        ]
+    },
+    {
+        "id": "f324235021ade1ae",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Været",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5836c6f5b9724c9",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Hvor gagmmer bilen er (typ år)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d533b8f87be90715",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Lades til over 80%",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fullmessage",
+        "payload": "{\"antallOver80\": 5}",
+        "payloadType": "json",
+        "x": 270,
+        "y": 1080,
+        "wires": [
+            [
+                "48f4141ebf8756b8"
+            ]
+        ]
+    },
+    {
+        "id": "67845d46617a4130",
+        "type": "random",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "low": 1,
+        "high": "100",
+        "inte": "true",
+        "property": "payload",
+        "x": 480,
+        "y": 1120,
+        "wires": [
+            [
+                "9bf2b935d472f049"
+            ]
+        ]
+    },
+    {
+        "id": "818b38d1241e0d01",
+        "type": "random",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "low": "5",
+        "high": "40",
+        "inte": "true",
+        "property": "payload",
+        "x": 800,
+        "y": 1120,
+        "wires": [
+            [
+                "07b10c30c54d72a4"
+            ]
+        ]
+    },
+    {
+        "id": "9bf2b935d472f049",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 44",
+        "func": "if (msg.payload == \"69\"){\n    msg.topic = \"produksjonsfeil\";\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 1120,
+        "wires": [
+            [
+                "818b38d1241e0d01"
+            ]
+        ]
+    },
+    {
+        "id": "a087f57985572221",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Timer",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 310,
+        "y": 1120,
+        "wires": [
+            [
+                "67845d46617a4130"
+            ]
+        ]
+    },
+    {
+        "id": "110854d60cb1eae0",
+        "type": "comment",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Produksjons feil",
+        "info": "",
+        "x": 160,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "da08d01832ba970b",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 45",
+        "func": "var batteryHealth = global.get(\"batteryHealth\");\nvar new_batteryHealth;\nvar hastighet = flow.get(\"hastighet\") || 0;\nvar antallLadninger = flow.get(\"antallLadninger\") || 0;\nvar antallLadningerpadrag = 1 + (antallLadninger * 5/100);\nvar antallOver80 = flow.get(\"antallOver80\") || 0;\nvar antallOver80padrag = 1 + (antallLadninger * 10 / 100);\nvar produksjonsfeil = flow.get(\"produksjonsfeil\") || false;\nvar produksjonfeilMengde = flow.get(\"produksjonsfeilMengde\") || 0;\nvar ongoingFix = global.get(\"ongoingFix\") || false;\nvar ongoingCharge = global.get(\"ongoingCharge\") || false;\n\nif (ongoingFix == false && ongoingFix == false){\n    if (produksjonsfeil == true){\n        flow.set(\"produksjonsfeil\", false);\n        new_batteryHealth = (batteryHealth - produksjonfeilMengde);\n        if (new_batteryHealth < 0){\n            global.set(\"brokenBattery\", true);\n            msg.payload = { \"batteryHealth\": 0.0001 };\n            return msg;\n        }\n        msg.payload = { \"batteryHealth\": new_batteryHealth };\n        return msg;\n    \n    } else {\n        new_batteryHealth = batteryHealth - ((0.01 * hastighet) * antallLadningerpadrag * antallOver80padrag);\n        if (new_batteryHealth < 0){\n            msg.payload = { \"batteryHealth\": 0.0001 };\n            global.set(\"brokenBattery\", true);\n            return msg;\n        }\n        msg.payload = { \"batteryHealth\": new_batteryHealth };\n        return msg;\n    }\n}\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 920,
+        "wires": [
+            [
+                "99d945993ea655a2",
+                "652ba819e0c29f9d"
+            ]
+        ]
+    },
+    {
+        "id": "1e0eda82799c2c2e",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 46",
+        "func": "if(msg.topic == \"fullmessage\"){\n    msg.payload = msg.payload.hastighet;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1000,
+        "wires": [
+            [
+                "a02e89605d29ef40"
+            ]
+        ]
+    },
+    {
+        "id": "48f4141ebf8756b8",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 47",
+        "func": "if (msg.topic == \"fullmessage\") {\n    flow.set(\"antallOver80\", msg.payload.antallOver80);\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2ff6815568773b6",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 48",
+        "func": "if (msg.topic == \"ladestasjon\") {\n    if(msg.payload.charge_count){\n        flow.set(\"antallLadninger\", msg.payload.charge_count);\n    }\n    \n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3ebd0d870a43b37d",
+        "type": "mqtt in",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "topic": "saldo",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "1f146fc88da6ebfa"
+            ]
+        ]
+    },
+    {
+        "id": "1faa094bf5d02fab",
+        "type": "comment",
+        "z": "d317f4c3b9f44b9e",
+        "name": "må legge in variabel som blokkerer når det er en batterireperasjon på gang",
+        "info": "",
+        "x": 660,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "f4f5bf6d39d4bed6",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "verksted",
+        "payload": "{\"batteryHealth\":100}",
+        "payloadType": "json",
+        "x": 240,
+        "y": 960,
+        "wires": [
+            [
+                "e0df67232a6a8357"
+            ]
+        ]
+    },
+    {
+        "id": "dff5b3c300932f7e",
+        "type": "mqtt in",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "topic": "verksted",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 480,
+        "y": 960,
+        "wires": [
+            [
+                "e0df67232a6a8357"
+            ]
+        ]
+    },
+    {
+        "id": "e0df67232a6a8357",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 59",
+        "func": "if (msg.topic == \"verksted\"){\n    if (msg.payload.batteryHealth){\n    msg.payload = msg.payload.batteryHealth;\n    return msg;\n    }\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 960,
+        "wires": [
+            [
+                "b57f9bd394c4b60f"
+            ]
+        ]
+    },
+    {
+        "id": "b57f9bd394c4b60f",
+        "type": "rbe",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 870,
+        "y": 960,
+        "wires": [
+            [
+                "3fe4f4b088b67005"
+            ]
+        ]
+    },
+    {
+        "id": "f2d2e93edbb72fb9",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 480,
+        "y": 920,
+        "wires": [
+            [
+                "00b736d94bfc741e",
+                "da08d01832ba970b"
+            ]
+        ]
+    },
+    {
+        "id": "399e0d0b01a1ea9b",
+        "type": "comment",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Funksjonen blir trigget hvert halve sekund",
+        "info": "",
+        "x": 360,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "1e62572d4dda38e4",
+        "type": "comment",
+        "z": "d317f4c3b9f44b9e",
+        "name": "maks trekk per .5 sekund er 0.2, dvs 2.5 sek for 1 %, øker ved mange ladninger",
+        "info": "",
+        "x": 380,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "00b736d94bfc741e",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Resetter ladninger",
+        "func": "var batterySwapped = global.get(\"batterySwapped\") || false;\n\nif (batterySwapped == true){\n    flow.set(\"antallOver80\", 0);\n    flow.set(\"antallLadninger\", 0);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dff9a6e9d99d740d",
+        "type": "comment",
+        "z": "d317f4c3b9f44b9e",
+        "name": "går ut i fra 0.3 m/s toppfart",
+        "info": "",
+        "x": 310,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "a02e89605d29ef40",
+        "type": "range",
+        "z": "d317f4c3b9f44b9e",
+        "minin": "0",
+        "maxin": "30",
+        "minout": "0",
+        "maxout": "1",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 630,
+        "y": 1000,
+        "wires": [
+            [
+                "767cc86272120647"
+            ]
+        ]
+    },
+    {
+        "id": "767cc86272120647",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 65",
+        "func": "flow.set(\"hastighet\", msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1000,
+        "wires": [
+            [
+                "2d4c76591fbc5432"
+            ]
+        ]
+    },
+    {
+        "id": "3fe4f4b088b67005",
+        "type": "change",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "batteryHealth",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "99d945993ea655a2",
+        "type": "mqtt out",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "topic": "verksted",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 880,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "652ba819e0c29f9d",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 66",
+        "func": "msg.payload = msg.payload.batteryHealth;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 920,
+        "wires": [
+            [
+                "3fe4f4b088b67005"
+            ]
+        ]
+    },
+    {
+        "id": "07b10c30c54d72a4",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 67",
+        "func": "if(msg.topic){\n    flow.set(\"produksjonsfeilMengde\", msg.payload);\n    flow.set(\"produksjonsfeil\", true);\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb065ac033d25a55",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "69",
+        "payloadType": "num",
+        "x": 490,
+        "y": 1160,
+        "wires": [
+            [
+                "9bf2b935d472f049"
+            ]
+        ]
+    },
+    {
+        "id": "0d9c2a178dd5a5fd",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 68",
+        "func": "var current_Charge = global.get(\"current_Charge\");\nvar ongoingCharge = global.get(\"ongoingCharge\") || false;\nvar ongoingFix = global.get(\"ongoingFix\") || false;\nvar new_charge;\nvar hastighet = flow.get(\"hastighet\") || 0;\nvar antallLadninger = flow.get(\"antallLadninger\") || 0;\nvar antallLadningerpadrag = 1 + (antallLadninger * 5 / 100);\nvar antallOver80 = flow.get(\"antallOver80\") || 0;\nvar antallOver80padrag = 1 + (antallLadninger * 10 / 100);\nvar batteryHealtpadrag = flow.get(\"batteryHealthpadrag\");\nvar brokenBattery = global.get(\"brokenBattery\") || false;\n\n\nif (ongoingCharge == false && ongoingFix == false){\n    if (brokenBattery == false){\n        new_charge = current_Charge - (0.1 * hastighet * batteryHealtpadrag * antallLadningerpadrag * antallOver80padrag)\n        if (new_charge < 0) {\n            msg.payload = { \"current_Charge\": 0.00001 };\n            return msg;\n        }\n        msg.payload = { \"current_Charge\": new_charge };\n        return msg;\n    } else if (brokenBattery == true){\n        msg.payload = { \"current_Charge\": current_Charge };\n        return msg;\n    }\n\n} \n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 640,
+        "wires": [
+            [
+                "848f336db18f9242",
+                "65146a942ffb2d25"
+            ]
+        ]
+    },
+    {
+        "id": "c98cf843d360dd03",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 460,
+        "y": 600,
+        "wires": [
+            [
+                "1ecc9787faf80406",
+                "0d9c2a178dd5a5fd"
+            ]
+        ]
+    },
+    {
+        "id": "cfc3d9f9bba23b05",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 640,
+        "wires": [
+            [
+                "0d9c2a178dd5a5fd"
+            ]
+        ]
+    },
+    {
+        "id": "4ec1e569583387e2",
+        "type": "mqtt in",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "topic": "ladestasjon",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "b1323f4866ec097f"
+            ]
+        ]
+    },
+    {
+        "id": "2c77cde0275e1350",
+        "type": "change",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_Charge",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d5f893c8eff18e7",
+        "type": "mqtt in",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "topic": "ladestasjon",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 450,
+        "y": 680,
+        "wires": [
+            [
+                "75e250a47fc717e3"
+            ]
+        ]
+    },
+    {
+        "id": "75e250a47fc717e3",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 69",
+        "func": "if (msg.topic == \"ladestasjon\"){\n    if (msg.payload.current_Charge){\n        msg.payload = msg.payload.current_Charge;\n    return msg;\n    }\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 680,
+        "wires": [
+            [
+                "c028dc0671ebe022"
+            ]
+        ]
+    },
+    {
+        "id": "c028dc0671ebe022",
+        "type": "rbe",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 870,
+        "y": 680,
+        "wires": [
+            [
+                "2c77cde0275e1350"
+            ]
+        ]
+    },
+    {
+        "id": "848f336db18f9242",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 70",
+        "func": "msg.payload = msg.payload.current_Charge;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 640,
+        "wires": [
+            [
+                "2c77cde0275e1350"
+            ]
+        ]
+    },
+    {
+        "id": "65146a942ffb2d25",
+        "type": "mqtt out",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "topic": "ladestasjon",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 850,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "720c5055f42a2d6f",
+        "type": "range",
+        "z": "d317f4c3b9f44b9e",
+        "minin": "0",
+        "maxin": "100",
+        "minout": "5",
+        "maxout": "1",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 830,
+        "y": 560,
+        "wires": [
+            [
+                "aefed1bb5a5330fb"
+            ]
+        ]
+    },
+    {
+        "id": "aefed1bb5a5330fb",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 72",
+        "func": "flow.set(\"batteryHealthpadrag\", msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ecc9787faf80406",
+        "type": "function",
+        "z": "d317f4c3b9f44b9e",
+        "name": "function 73",
+        "func": "var batteryHealth = global.get(\"batteryHealth\");\nmsg.payload = batteryHealth;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 560,
+        "wires": [
+            [
+                "720c5055f42a2d6f"
+            ]
+        ]
+    },
+    {
+        "id": "3c97cfde365c4c44",
+        "type": "mqtt in",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "topic": "ladestasjon",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 1040,
+        "wires": [
+            [
+                "b2ff6815568773b6"
+            ]
+        ]
+    },
+    {
+        "id": "c2d1fed63c8ee698",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 510,
+        "y": 80,
+        "wires": [
+            [
+                "a8b6056e49be9be1"
+            ]
+        ]
+    },
+    {
+        "id": "2d4c76591fbc5432",
+        "type": "mqtt out",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "topic": "fart",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 1070,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "ce6aa2af4d4285f1",
+        "type": "mqtt in",
+        "z": "d317f4c3b9f44b9e",
+        "name": "",
+        "topic": "fart",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 490,
+        "y": 120,
+        "wires": [
+            [
+                "a8b6056e49be9be1"
+            ]
+        ]
+    },
+    {
+        "id": "35611a453d243446",
+        "type": "inject",
+        "z": "d317f4c3b9f44b9e",
+        "name": "Hastighet",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fullmessage",
+        "payload": "{\"hastighet\": 0}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 1000,
+        "wires": [
+            [
+                "1e0eda82799c2c2e"
+            ]
+        ]
+    },
+    {
+        "id": "a207e281c4db5a6d",
+        "type": "ui_chart",
+        "z": "f329b30477b3c4ad",
+        "name": "",
+        "group": "46034e0b7f87d5e3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temp",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ccd9ae8b86306e44",
+        "type": "ui_chart",
+        "z": "f329b30477b3c4ad",
+        "name": "",
+        "group": "c2117c82f3745131",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Hum",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3a96ad9579c8420",
+        "type": "ui_gauge",
+        "z": "f329b30477b3c4ad",
+        "name": "Light state",
+        "group": "c701595e67cd5781",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "gtype": "gage",
+        "title": "",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#2b2b2b",
+            "#c8ca53",
+            "#eeff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1376f1b32fdb475a",
+        "type": "ui_text",
+        "z": "f329b30477b3c4ad",
+        "group": "c701595e67cd5781",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "Light state",
+        "label": "Light state:",
+        "format": "{{value}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 610,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ca20a595b1a80757",
+        "type": "function",
+        "z": "f329b30477b3c4ad",
+        "name": "function 8",
+        "func": "var msg1;\nvar msg2;\nvar msg3;\nvar msg4;\nvar msg5;\n\nif(msg.topic = \"fullmessage\"){\n    context.set(\"hum\", msg.payload.humidity);\n    context.set(\"temp\", msg.payload.temperature);\n    context.set(\"light\", msg.payload.lightLevel);\n    context.set(\"energyProduction\", msg.payload.energyProduction);\n    context.set(\"totalEnergyProduction\", msg.payload.totalEnergyProduction);\n}\nvar hum = context.get(\"hum\")\nvar temp = context.get(\"temp\")\nvar lightLevel = context.get(\"light\")\nvar light;\nvar energyProduction = context.get(\"energyProduction\")\nvar totalEnergyProduction = context.get(\"totalEnergyProduction\")\n\n\nif(lightLevel <= \"33\"){\n    light = \"Mørkt\";\n} else if (lightLevel >= \"33\" && lightLevel <= \"66\"){\n    light = \"Skumring\";\n} else if (lightLevel >=\"66\"){\n    light = \"Lyst\";\n}\n\nmsg =  { payload: temp };\nmsg1 = { payload: hum };\nmsg2 = { payload: light };\nmsg3 = { payload: lightLevel};\nmsg4 = { payload: energyProduction};\nmsg5 = { payload: totalEnergyProduction};\n\n\nreturn [msg, msg1, msg2, msg3, msg4, msg5];\n\n\n\n",
+        "outputs": 6,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [
+                "a207e281c4db5a6d"
+            ],
+            [
+                "ccd9ae8b86306e44"
+            ],
+            [
+                "1376f1b32fdb475a"
+            ],
+            [
+                "d3a96ad9579c8420"
+            ],
+            [
+                "fe464cd7988ba42a"
+            ],
+            [
+                "eb8bb562dab6711c"
+            ]
+        ]
+    },
+    {
+        "id": "4c14c5d56da5c17e",
+        "type": "mqtt in",
+        "z": "f329b30477b3c4ad",
+        "name": "",
+        "topic": "fullmessage",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "ca20a595b1a80757",
+                "1117ecd20bafa37b",
+                "c30e47895ca5486b"
+            ]
+        ]
+    },
+    {
+        "id": "eb8bb562dab6711c",
+        "type": "ui_chart",
+        "z": "f329b30477b3c4ad",
+        "name": "",
+        "group": "417a525f70d10cc6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Total produksjon(kWh)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 640,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "401a8692cd9430c4",
+        "type": "ui_table",
+        "z": "f329b30477b3c4ad",
+        "group": "0c1ab7878578bc06",
+        "name": "",
+        "order": 1,
+        "width": "6",
+        "height": "5",
+        "columns": [
+            {
+                "field": "runde",
+                "title": "Passering:",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "tid",
+                "title": "Tid:",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 930,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "fe464cd7988ba42a",
+        "type": "ui_gauge",
+        "z": "f329b30477b3c4ad",
+        "name": "",
+        "group": "417a525f70d10cc6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Nåværende produksjon",
+        "label": "units",
+        "format": "kWh",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 650,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1117ecd20bafa37b",
+        "type": "debug",
+        "z": "f329b30477b3c4ad",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8eaeed3fc207efa2",
+        "type": "function",
+        "z": "f329b30477b3c4ad",
+        "name": "function 41",
+        "func": "var tableData = flow.get(\"savedData\") || [];\nvar roundCount = flow.get(\"count\") || 1;\n\ntableData.unshift({\n    \"runde\" : roundCount,\n    \"tid\"   : msg.payload \n});\n\nmsg.payload = tableData;\nroundCount += 1;\nflow.set(\"count\", roundCount);\nflow.set(\"savedData\", tableData);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 360,
+        "wires": [
+            [
+                "401a8692cd9430c4"
+            ]
+        ]
+    },
+    {
+        "id": "c30e47895ca5486b",
+        "type": "function",
+        "z": "f329b30477b3c4ad",
+        "name": "function 42",
+        "func": "if(msg.topic == \"fullmessage\"){\n    msg.payload = msg.payload.lapTime;\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "9c4c92b920df62fb"
+            ]
+        ]
+    },
+    {
+        "id": "9c4c92b920df62fb",
+        "type": "rbe",
+        "z": "f329b30477b3c4ad",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "8eaeed3fc207efa2"
+            ]
+        ]
+    },
+    {
+        "id": "ca717fb65b9a4fba",
+        "type": "change",
+        "z": "f329b30477b3c4ad",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "savedData",
+                "pt": "flow",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6fb057ebbb0f9c56",
+        "type": "inject",
+        "z": "f329b30477b3c4ad",
+        "name": "Reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "ca717fb65b9a4fba",
+                "481488c9916c210a"
+            ]
+        ]
+    },
+    {
+        "id": "481488c9916c210a",
+        "type": "change",
+        "z": "f329b30477b3c4ad",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "count",
+                "pt": "flow",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32cf6d75cf40946d",
+        "type": "inject",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "33b81acbebb5824b"
+            ]
+        ]
+    },
+    {
+        "id": "33b81acbebb5824b",
+        "type": "random",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "low": "5",
+        "high": "5",
+        "inte": "true",
+        "property": "payload",
+        "x": 440,
+        "y": 180,
+        "wires": [
+            [
+                "f188803b425e8fa6"
+            ]
+        ]
+    },
+    {
+        "id": "f188803b425e8fa6",
+        "type": "change",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "prosentPrice",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 180,
+        "wires": [
+            [
+                "eac73fe075f9e64f"
+            ]
+        ]
+    },
+    {
+        "id": "7d6e87df97eb8ddf",
+        "type": "inject",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "4a58ad4c50e1179b"
+            ]
+        ]
+    },
+    {
+        "id": "4a58ad4c50e1179b",
+        "type": "random",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "low": "200",
+        "high": "1000",
+        "inte": "true",
+        "property": "payload",
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "a8a620774d1923ab"
+            ]
+        ]
+    },
+    {
+        "id": "a8a620774d1923ab",
+        "type": "change",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "saldo",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "6fabe3c7b23710c0"
+            ]
+        ]
+    },
+    {
+        "id": "acfeb425ed027211",
+        "type": "mqtt out",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "topic": "saldo",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 1010,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "27c1757526a4edaf",
+        "type": "ui_text_input",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "label": "Prosent Pris",
+        "tooltip": "",
+        "group": "a619f971a1451f15",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "f188803b425e8fa6"
+            ]
+        ]
+    },
+    {
+        "id": "8fb4a53166fa5cff",
+        "type": "ui_text_input",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "label": "Saldo",
+        "tooltip": "",
+        "group": "a619f971a1451f15",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "a8a620774d1923ab"
+            ]
+        ]
+    },
+    {
+        "id": "eac73fe075f9e64f",
+        "type": "function",
+        "z": "43fabd88ca271808",
+        "name": "function 26",
+        "func": "msg.payload = { prosentPrice: msg.payload };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 180,
+        "wires": [
+            [
+                "acfeb425ed027211"
+            ]
+        ]
+    },
+    {
+        "id": "6fabe3c7b23710c0",
+        "type": "function",
+        "z": "43fabd88ca271808",
+        "name": "function 27",
+        "func": "msg.payload = { saldo: msg.payload };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 260,
+        "wires": [
+            [
+                "acfeb425ed027211"
+            ]
+        ]
+    },
+    {
+        "id": "3a8419db8fc5221a",
+        "type": "mqtt in",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "topic": "saldo",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "78009a32bd8ab585"
+            ]
+        ]
+    },
+    {
+        "id": "78009a32bd8ab585",
+        "type": "function",
+        "z": "43fabd88ca271808",
+        "name": "function 30",
+        "func": "if (msg.topic == \"saldo\"){\n    msg.payload = msg.payload.saldo;\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "64f1883a41fc17bb"
+            ]
+        ]
+    },
+    {
+        "id": "64f1883a41fc17bb",
+        "type": "rbe",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 450,
+        "y": 320,
+        "wires": [
+            [
+                "a8a620774d1923ab"
+            ]
+        ]
+    },
+    {
+        "id": "95349e79d065735d",
+        "type": "ui_text_input",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "label": "Batteri nivå",
+        "tooltip": "",
+        "group": "a619f971a1451f15",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "d4415e964d76d173"
+            ]
+        ]
+    },
+    {
+        "id": "94b473610776c5c0",
+        "type": "ui_text_input",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "label": "Batteri helse",
+        "tooltip": "",
+        "group": "a619f971a1451f15",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "a6efa38b01e20751"
+            ]
+        ]
+    },
+    {
+        "id": "d4415e964d76d173",
+        "type": "function",
+        "z": "43fabd88ca271808",
+        "name": "function 93",
+        "func": "msg.payload = { current_Charge: msg.payload };\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 500,
+        "wires": [
+            [
+                "9240837ccb520d3b"
+            ]
+        ]
+    },
+    {
+        "id": "a6efa38b01e20751",
+        "type": "function",
+        "z": "43fabd88ca271808",
+        "name": "function 94",
+        "func": "msg.payload = { batteryHealth: msg.payload };\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 560,
+        "wires": [
+            [
+                "19fa94bbeec438b4"
+            ]
+        ]
+    },
+    {
+        "id": "9240837ccb520d3b",
+        "type": "mqtt out",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "topic": "ladestasjon",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 870,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "19fa94bbeec438b4",
+        "type": "mqtt out",
+        "z": "43fabd88ca271808",
+        "name": "",
+        "topic": "verksted",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 860,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d8886daf34118efd",
+        "type": "ui_slider",
+        "z": "9544cff3487df065",
+        "name": "Slider",
+        "label": "",
+        "tooltip": "",
+        "group": "7038cf49c498b456",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "wanted_charge",
+        "topicType": "str",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 450,
+        "y": 540,
+        "wires": [
+            [
+                "1cd3d62a5bd0a5ac"
+            ]
+        ]
+    },
+    {
+        "id": "d2f5bc44326e1779",
+        "type": "ui_button",
+        "z": "9544cff3487df065",
+        "name": "Send",
+        "group": "7038cf49c498b456",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Bekreft ladning",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "send",
+        "payloadType": "str",
+        "topic": "send",
+        "topicType": "str",
+        "x": 750,
+        "y": 480,
+        "wires": [
+            [
+                "1ec158e308dd0aa0"
+            ]
+        ]
+    },
+    {
+        "id": "1cd3d62a5bd0a5ac",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 31",
+        "func": "var msg1;\nvar prosentPrice = global.get(\"prosentPrice\");\nvar brokenBattery = global.get(\"brokenBattery\") || false;\n\n//Mottar verdier og setter variabler\nif (msg.topic == \"ladestasjon\") {\n    context.set(\"currentCharge\", msg.payload.current_Charge);\n} else if (msg.topic == \"wanted_charge\"){\n    context.set(\"wantedCharge\", msg.payload);\n    context.set(\"motattWanted\", true);\n}\nvar currentCharge = context.get(\"currentCharge\");\nvar motattWanted = context.get(\"motattWanted\") || false;\nvar wantedCharge = context.get(\"wantedCharge\") || 0;\n\n\n\n//Regner ut differansen mellom Current og WantedCharge\nif(motattWanted == true){\n    flow.set(\"chargeDiff\", (wantedCharge - currentCharge));\n    context.set(\"motattChargeDiff\", true);\n    context.set(\"motattWanted\", false);\n}\nvar motattChargeDiff = context.get(\"motattChargeDiff\") || false;\nvar chargeDiff = flow.get(\"chargeDiff\");\n\n//Setter pris texten og skrur av/på knapp ut i fra størrelsen på chargeDiff\n\nif (motattChargeDiff == true) {\n    context.set(\"motattChargeDiff\", false);\n    if (brokenBattery == false){\n        if (chargeDiff > 0) { //Ønsketverdi større enn null, skru på knapp\n            msg.curr = currentCharge;\n            var chargePrice = prosentPrice * chargeDiff;\n            msg.payload = { \"chargePrice\": chargePrice, \"wantedCharge\": wantedCharge, };\n            msg.enabled = true;\n            msg.topic = \"ladestasjon\";\n            return [msg, null];\n        } else if (chargeDiff <= 0) { //Ønsketverdi mindre enn null, skru knapp av\n            msg1 = { payload: \"Ønsket ladeverdi er lavere enn nåværende batterinivå!\" };\n            msg.chargePrice = \"\";\n            msg.enabled = false;\n            return [msg, msg1];\n        }\n    } else if (brokenBattery == true) {\n        msg1 = { payload: \"Batteriet er ødelagt, det må byttes helt!\" };\n        msg.chargePrice = \"\";\n        msg.enabled = false;\n        return [msg, msg1];\n    }\n}\n\n\n\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 580,
+        "wires": [
+            [
+                "d2f5bc44326e1779",
+                "1ec158e308dd0aa0",
+                "712ab1b7bf84a3de"
+            ],
+            [
+                "db5e6b9a119f9c16"
+            ]
+        ]
+    },
+    {
+        "id": "badf096ce8cec7aa",
+        "type": "ui_button",
+        "z": "9544cff3487df065",
+        "name": "50%",
+        "group": "7038cf49c498b456",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Lad til 50%",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "50",
+        "payloadType": "num",
+        "topic": "wanted_charge",
+        "topicType": "str",
+        "x": 450,
+        "y": 540,
+        "wires": [
+            [
+                "1cd3d62a5bd0a5ac"
+            ]
+        ]
+    },
+    {
+        "id": "6b1d4ee03791d917",
+        "type": "ui_button",
+        "z": "9544cff3487df065",
+        "name": "75%",
+        "group": "7038cf49c498b456",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Lad til 75%",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "75",
+        "payloadType": "num",
+        "topic": "wanted_charge",
+        "topicType": "str",
+        "x": 450,
+        "y": 540,
+        "wires": [
+            [
+                "1cd3d62a5bd0a5ac"
+            ]
+        ]
+    },
+    {
+        "id": "b6603bd195162909",
+        "type": "ui_button",
+        "z": "9544cff3487df065",
+        "name": "100%",
+        "group": "7038cf49c498b456",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Lad til 100%",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "wanted_charge",
+        "topicType": "str",
+        "x": 450,
+        "y": 540,
+        "wires": [
+            [
+                "1cd3d62a5bd0a5ac"
+            ]
+        ]
+    },
+    {
+        "id": "857e300a57568498",
+        "type": "ui_button",
+        "z": "9544cff3487df065",
+        "name": "25%",
+        "group": "7038cf49c498b456",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Lad til 25%",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "25",
+        "payloadType": "num",
+        "topic": "wanted_charge",
+        "topicType": "str",
+        "x": 450,
+        "y": 540,
+        "wires": [
+            [
+                "1cd3d62a5bd0a5ac"
+            ]
+        ]
+    },
+    {
+        "id": "20881d7da75be1c2",
+        "type": "mqtt out",
+        "z": "9544cff3487df065",
+        "name": "ladestasjon",
+        "topic": "ladestasjon",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 1170,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "198ff2348be3b79b",
+        "type": "inject",
+        "z": "9544cff3487df065",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ladestasjon",
+        "payload": "{\"current_Charge\": 51}",
+        "payloadType": "json",
+        "x": 260,
+        "y": 640,
+        "wires": [
+            [
+                "1cd3d62a5bd0a5ac",
+                "daaee52e581113de"
+            ]
+        ]
+    },
+    {
+        "id": "a2fb5def6ce3c3e5",
+        "type": "ui_text",
+        "z": "9544cff3487df065",
+        "group": "1d48aa81cd159a7c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Lade pris pr %",
+        "label": "Lade pris pr % ladet:",
+        "format": "{{msg.payload | number: 0}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 760,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "712ab1b7bf84a3de",
+        "type": "ui_text",
+        "z": "9544cff3487df065",
+        "group": "7038cf49c498b456",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Pris for lading:",
+        "format": "{{msg.payload.chargePrice | number: 0}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 1180,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "dfa6e41675d7e167",
+        "type": "ui_toast",
+        "z": "9544cff3487df065",
+        "position": "top left",
+        "displayTime": "3",
+        "highlight": "Red",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 770,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1ec158e308dd0aa0",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 32",
+        "func": "var msg1;\nvar msg2;\nvar msg3;\nvar saldo = global.get(\"saldo\");\n\n\n\nif (msg.topic == \"ladestasjon\"){\n    context.set(\"chargePrice\", msg.payload.chargePrice);\n    context.set(\"wantedCharge\", msg.payload.wantedCharge);\n}\nvar chargePrice = context.get(\"chargePrice\");\nvar priceDiff = (saldo - chargePrice);\nvar wantedCharge = context.get(\"wantedCharge\");\n\n\n\nif (msg.topic == \"send\") {\n    if (priceDiff >= 0) {\n        global.set(\"ongoingCharge\", true);\n        global.set(\"current_Charge\", wantedCharge);\n        msg.payload = { \"saldo\": priceDiff, \"chargePrice\": \"\"};\n        msg2 = { enabled: false };\n        msg3 = { payload: 0 };\n        return [msg, null, msg2, msg3];\n    } else if (priceDiff < 0) {\n        msg = { saldo: saldo };\n        msg1 = { payload: \"Du har for lav saldo for å betale!\" };\n        return [msg, msg1, null, null];\n    }\n}\n",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "3dbd5fbd0b3e3ff6",
+                "c2c88d2bdabf020f",
+                "20881d7da75be1c2"
+            ],
+            [
+                "181173a220b1695a"
+            ],
+            [
+                "25eb248a08b787c9"
+            ],
+            [
+                "0a25330af995bbb6"
+            ]
+        ]
+    },
+    {
+        "id": "4b8e2b781f79c8fe",
+        "type": "mqtt in",
+        "z": "9544cff3487df065",
+        "name": "Henter current_charge",
+        "topic": "ladestasjon",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 580,
+        "wires": [
+            [
+                "6d1691e9fafa1625",
+                "525020b9f068ddba"
+            ]
+        ]
+    },
+    {
+        "id": "ff65eca8740f746b",
+        "type": "ui_text",
+        "z": "9544cff3487df065",
+        "group": "1d48aa81cd159a7c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current balance:",
+        "format": "{{msg.payload | number: 0}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 770,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9489f5941960e637",
+        "type": "link in",
+        "z": "9544cff3487df065",
+        "name": "link in 7",
+        "links": [
+            "25eb248a08b787c9"
+        ],
+        "x": 635,
+        "y": 480,
+        "wires": [
+            [
+                "d2f5bc44326e1779"
+            ]
+        ]
+    },
+    {
+        "id": "0a25330af995bbb6",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 6",
+        "mode": "link",
+        "links": [
+            "3876bbea2e63a45a"
+        ],
+        "x": 1115,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "25eb248a08b787c9",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 7",
+        "mode": "link",
+        "links": [
+            "9489f5941960e637"
+        ],
+        "x": 1115,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "3dbd5fbd0b3e3ff6",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 8",
+        "mode": "link",
+        "links": [
+            "502ff234e7ee2938",
+            "500b0680562a0440"
+        ],
+        "x": 1115,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "10afaf499b2f26b0",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 33",
+        "func": "//var UID = context.get(\"uid\") || \"\";\n\nif (msg.topic == \"ladestasjon\"){\n    context.set(\"uid\", msg.payload.UID);\n}\n\nvar uid = context.get(\"uid\") || \"\";\n\n\nif(uid == \"\"){\n    flow.set(\"uid\", false);\n    msg.payload = \"Det står ingen bli ved ladestasjonen\";\n    return msg;\n} else if(uid == \"63BD33B\"){\n    flow.set(\"uid\", true);\n    msg.payload = \"Bil nr.1 står ved ladestasjonen\";\n    return msg;\n} else if(uid == \"7EE0A7D\"){\n    flow.set(\"uid\", true);\n    msg.payload = \"Bil nr.2 står ved ladestasjonen\";\n    return msg;\n} else{\n    flow.set(\"uid\", true);\n    msg.payload = \"Det står en ukjent bil ved ladestasjonen\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "\n",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 880,
+        "wires": [
+            [
+                "aeb33fa89df7aaaf",
+                "23b03939a09fc455"
+            ]
+        ]
+    },
+    {
+        "id": "eb64109e90eeb0ca",
+        "type": "mqtt in",
+        "z": "9544cff3487df065",
+        "name": "UID",
+        "topic": "ladestasjon",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 880,
+        "wires": [
+            [
+                "1de9b639e73fec2e"
+            ]
+        ]
+    },
+    {
+        "id": "a58503bcae28e3b3",
+        "type": "inject",
+        "z": "9544cff3487df065",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ladestasjon",
+        "payload": "{\"UID\": \"63BD33B\"}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 800,
+        "wires": [
+            [
+                "10afaf499b2f26b0"
+            ]
+        ]
+    },
+    {
+        "id": "379e62c0a5fae651",
+        "type": "inject",
+        "z": "9544cff3487df065",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "UID",
+        "payload": "en annen uid",
+        "payloadType": "str",
+        "x": 260,
+        "y": 840,
+        "wires": [
+            [
+                "10afaf499b2f26b0"
+            ]
+        ]
+    },
+    {
+        "id": "9120c15e03ed7d01",
+        "type": "inject",
+        "z": "9544cff3487df065",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ladestasjon",
+        "payload": "{\"UID\": \"\"}",
+        "payloadType": "json",
+        "x": 260,
+        "y": 760,
+        "wires": [
+            [
+                "10afaf499b2f26b0"
+            ]
+        ]
+    },
+    {
+        "id": "aeb33fa89df7aaaf",
+        "type": "ui_text",
+        "z": "9544cff3487df065",
+        "group": "1d48aa81cd159a7c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 670,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "371f96e311a6bd91",
+        "type": "switch",
+        "z": "9544cff3487df065",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 830,
+        "y": 880,
+        "wires": [
+            [
+                "6be4b00d7af756ad",
+                "84c7e55ed6994507",
+                "eeaf73720b139b37",
+                "b1b87b628a816a66"
+            ],
+            [
+                "81a1f7b622510a53",
+                "3114d6d319bf41a8",
+                "704ac7fc263864bc",
+                "a7b47b6428c4b83a"
+            ]
+        ]
+    },
+    {
+        "id": "79e07a378dad1d2e",
+        "type": "ui_ui_control",
+        "z": "9544cff3487df065",
+        "name": "",
+        "events": "all",
+        "x": 1140,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6be4b00d7af756ad",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Ladestasjon/Verksted_Ladevalg\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 860,
+        "wires": [
+            [
+                "79e07a378dad1d2e"
+            ]
+        ]
+    },
+    {
+        "id": "81a1f7b622510a53",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Ladestasjon/Verksted_Ladevalg\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 900,
+        "wires": [
+            [
+                "79e07a378dad1d2e"
+            ]
+        ]
+    },
+    {
+        "id": "23b03939a09fc455",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 34",
+        "func": "var ankommetbil = flow.get(\"uid\") || false;\n\nif (ankommetbil == true) {\n    msg.payload = true;\n    msg.ankommet = ankommetbil;\n    return msg\n} else {\n    msg.ankommet = ankommetbil;\n    msg.payload = false;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 880,
+        "wires": [
+            [
+                "371f96e311a6bd91"
+            ]
+        ]
+    },
+    {
+        "id": "89789889bc93cdeb",
+        "type": "switch",
+        "z": "9544cff3487df065",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 830,
+        "y": 1200,
+        "wires": [
+            [
+                "072d06fdf23fddca",
+                "5662da752cad5c5e"
+            ],
+            [
+                "6dfec38d6bf88ef6",
+                "d611375e4de29d76"
+            ]
+        ]
+    },
+    {
+        "id": "235c0fc86751dd8f",
+        "type": "ui_ui_control",
+        "z": "9544cff3487df065",
+        "name": "",
+        "events": "all",
+        "x": 1140,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "072d06fdf23fddca",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Ladestasjon/Verksted_Ladeprosses\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 1180,
+        "wires": [
+            [
+                "235c0fc86751dd8f"
+            ]
+        ]
+    },
+    {
+        "id": "6dfec38d6bf88ef6",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Ladestasjon/Verksted_Ladeprosses\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 1220,
+        "wires": [
+            [
+                "235c0fc86751dd8f"
+            ]
+        ]
+    },
+    {
+        "id": "876974ede4cff181",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 35",
+        "func": "var ladetilstand = global.get(\"ongoingCharge\") || false;\n\nif (ladetilstand == true) {\n    msg.payload = true;\n    return msg;\n} else {\n    msg.payload = false;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1200,
+        "wires": [
+            [
+                "89789889bc93cdeb"
+            ]
+        ]
+    },
+    {
+        "id": "502ff234e7ee2938",
+        "type": "link in",
+        "z": "9544cff3487df065",
+        "name": "link in 9",
+        "links": [
+            "3dbd5fbd0b3e3ff6"
+        ],
+        "x": 565,
+        "y": 1240,
+        "wires": [
+            [
+                "876974ede4cff181"
+            ]
+        ]
+    },
+    {
+        "id": "d93f69055bb68002",
+        "type": "ui_gauge",
+        "z": "9544cff3487df065",
+        "name": "",
+        "group": "1ae1b7337644226a",
+        "order": 4,
+        "width": 9,
+        "height": 4,
+        "gtype": "donut",
+        "title": "  ",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#8c8c8c",
+            "#8c8c8c",
+            "#8c8c8c"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 670,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "232a160fa8767088",
+        "type": "mqtt in",
+        "z": "9544cff3487df065",
+        "name": "current_charge",
+        "topic": "ladestasjon",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 1600,
+        "wires": [
+            [
+                "e7607c7b2babda09"
+            ]
+        ]
+    },
+    {
+        "id": "819e1fffba6b23f1",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 36",
+        "func": "if (msg.topic == \"ladestasjon\") {\n    context.set(\"state\", msg.finnishedstate);\n}\n\nvar finnishedstate = context.get(\"state\") || false;\n\nif (finnishedstate == true){\n    global.set(\"ongoingCharge\", false);\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1200,
+        "wires": [
+            [
+                "876974ede4cff181"
+            ]
+        ]
+    },
+    {
+        "id": "29686c3f178b0d12",
+        "type": "inject",
+        "z": "9544cff3487df065",
+        "name": "",
+        "props": [
+            {
+                "p": "finnishedstate",
+                "v": "true",
+                "vt": "bool"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fullmessage",
+        "x": 290,
+        "y": 1240,
+        "wires": [
+            [
+                "819e1fffba6b23f1"
+            ]
+        ]
+    },
+    {
+        "id": "fc69c903f3a62e5e",
+        "type": "inject",
+        "z": "9544cff3487df065",
+        "name": "",
+        "props": [
+            {
+                "p": "finnishedstate",
+                "v": "false",
+                "vt": "bool"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fullmessage",
+        "x": 290,
+        "y": 1280,
+        "wires": [
+            [
+                "819e1fffba6b23f1"
+            ]
+        ]
+    },
+    {
+        "id": "6b12b4a3bf1c371d",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 37",
+        "func": "var msg1;\nvar msg2;\nvar count = msg.payload;\ncount = count + 1;\n\nif (count <= 100){\n    msg.payload = count;\n    return [msg, null, null];\n} else if (count > 100){\n    msg1 = { finnishedstate: true, payload: 0, topic: \"ladestasjon\" };\n    msg2 = { payload: \"Lading ferdig!\"};\n    return [null, msg1, msg2];\n}",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1440,
+        "wires": [
+            [
+                "ace5996d447d597c"
+            ],
+            [
+                "277cbc8c81e9a4f9",
+                "7cc0f4c3b20b5d6c"
+            ],
+            [
+                "10e4092f749a1c30"
+            ]
+        ]
+    },
+    {
+        "id": "ace5996d447d597c",
+        "type": "delay",
+        "z": "9544cff3487df065",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 1440,
+        "wires": [
+            [
+                "bbebddc5cf39ef0b",
+                "d93f69055bb68002"
+            ]
+        ]
+    },
+    {
+        "id": "3876bbea2e63a45a",
+        "type": "link in",
+        "z": "9544cff3487df065",
+        "name": "link in 10",
+        "links": [
+            "bbebddc5cf39ef0b",
+            "0a25330af995bbb6"
+        ],
+        "x": 175,
+        "y": 1440,
+        "wires": [
+            [
+                "6b12b4a3bf1c371d"
+            ]
+        ]
+    },
+    {
+        "id": "bbebddc5cf39ef0b",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 9",
+        "mode": "link",
+        "links": [
+            "3876bbea2e63a45a"
+        ],
+        "x": 635,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "277cbc8c81e9a4f9",
+        "type": "delay",
+        "z": "9544cff3487df065",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 340,
+        "y": 1360,
+        "wires": [
+            [
+                "fe2c8b3587d56b3f",
+                "819e1fffba6b23f1"
+            ]
+        ]
+    },
+    {
+        "id": "7cc0f4c3b20b5d6c",
+        "type": "delay",
+        "z": "9544cff3487df065",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "4",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 1480,
+        "wires": [
+            [
+                "d93f69055bb68002"
+            ]
+        ]
+    },
+    {
+        "id": "10e4092f749a1c30",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 10",
+        "mode": "link",
+        "links": [
+            "1e81649dc0b8806d"
+        ],
+        "x": 475,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "1e81649dc0b8806d",
+        "type": "link in",
+        "z": "9544cff3487df065",
+        "name": "Notification",
+        "links": [
+            "10e4092f749a1c30",
+            "181173a220b1695a",
+            "db5e6b9a119f9c16",
+            "923237e6cc9e12d2",
+            "181318455cf9149a"
+        ],
+        "x": 605,
+        "y": 180,
+        "wires": [
+            [
+                "dfa6e41675d7e167"
+            ]
+        ]
+    },
+    {
+        "id": "59321a080bc0fbc5",
+        "type": "ui_gauge",
+        "z": "9544cff3487df065",
+        "name": "",
+        "group": "7038cf49c498b456",
+        "order": 5,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Current battery",
+        "label": "%",
+        "format": "{{value | number: 1}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 640,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "6cb6a7f738209bd6",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 39",
+        "func": "if (msg.topic == \"saldo\") {\n    msg.payload = msg.payload.saldo;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 140,
+        "wires": [
+            [
+                "ff65eca8740f746b"
+            ]
+        ]
+    },
+    {
+        "id": "a6c666b3760197ba",
+        "type": "mqtt in",
+        "z": "9544cff3487df065",
+        "name": "",
+        "topic": "saldo",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 120,
+        "wires": [
+            [
+                "6cb6a7f738209bd6",
+                "4bf03b1dfea7ea48"
+            ]
+        ]
+    },
+    {
+        "id": "4bf03b1dfea7ea48",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 40",
+        "func": "if (msg.topic == \"saldo\") {\n    msg.payload = msg.payload.prosentPrice;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 100,
+        "wires": [
+            [
+                "a2fb5def6ce3c3e5"
+            ]
+        ]
+    },
+    {
+        "id": "6d1691e9fafa1625",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "Filter",
+        "func": "if (msg.topic == \"ladestasjon\") {\n    if (msg.payload.current_Charge){\n        return msg;\n    }\n}\n//blokkerer alt som ikke har msg.payload.current_Charge, for å ungå å få en \"NaN\" verdi",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "1cd3d62a5bd0a5ac"
+            ]
+        ]
+    },
+    {
+        "id": "181173a220b1695a",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 11",
+        "mode": "link",
+        "links": [
+            "1e81649dc0b8806d"
+        ],
+        "x": 1115,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "db5e6b9a119f9c16",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 12",
+        "mode": "link",
+        "links": [
+            "1e81649dc0b8806d"
+        ],
+        "x": 885,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "b463f86ec7f868dc",
+        "type": "ui_button",
+        "z": "9544cff3487df065",
+        "name": "",
+        "group": "12f08883259b40f2",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "bekreft",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "send",
+        "payloadType": "str",
+        "topic": "send",
+        "topicType": "str",
+        "x": 770,
+        "y": 1920,
+        "wires": [
+            [
+                "ec4f8e6d8ea31d62"
+            ]
+        ]
+    },
+    {
+        "id": "a0ed8f3f1df1e5e2",
+        "type": "ui_button",
+        "z": "9544cff3487df065",
+        "name": "",
+        "group": "12f08883259b40f2",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Quick fix",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "quick_fix",
+        "topicType": "str",
+        "x": 300,
+        "y": 1920,
+        "wires": [
+            [
+                "35fb8fbaad4baa8d"
+            ]
+        ]
+    },
+    {
+        "id": "f9edfbf608bad2a1",
+        "type": "ui_button",
+        "z": "9544cff3487df065",
+        "name": "",
+        "group": "12f08883259b40f2",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Batteri Swap",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "100",
+        "payloadType": "num",
+        "topic": "battery_swap",
+        "topicType": "str",
+        "x": 290,
+        "y": 2000,
+        "wires": [
+            [
+                "2eb3754510ae2ba2"
+            ]
+        ]
+    },
+    {
+        "id": "d611375e4de29d76",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Ladestasjon/Verksted_Filler1\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 1260,
+        "wires": [
+            [
+                "235c0fc86751dd8f"
+            ]
+        ]
+    },
+    {
+        "id": "5662da752cad5c5e",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Ladestasjon/Verksted_Filler1\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 1140,
+        "wires": [
+            [
+                "235c0fc86751dd8f"
+            ]
+        ]
+    },
+    {
+        "id": "3114d6d319bf41a8",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Ladestasjon/Verksted_Filler1\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 980,
+        "wires": [
+            [
+                "79e07a378dad1d2e"
+            ]
+        ]
+    },
+    {
+        "id": "84c7e55ed6994507",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Ladestasjon/Verksted_Filler1\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 780,
+        "wires": [
+            [
+                "79e07a378dad1d2e"
+            ]
+        ]
+    },
+    {
+        "id": "f3095d83feb14f10",
+        "type": "ui_gauge",
+        "z": "9544cff3487df065",
+        "name": "",
+        "group": "12f08883259b40f2",
+        "order": 2,
+        "width": 7,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Battery Health",
+        "label": "%",
+        "format": "{{value | number: 1}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1160,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "2ddc71c8cc501351",
+        "type": "ui_text",
+        "z": "9544cff3487df065",
+        "group": "12f08883259b40f2",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Pris for reperasjon:",
+        "format": "{{value}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 1210,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "18f7840b6d4f0766",
+        "type": "ui_button",
+        "z": "9544cff3487df065",
+        "name": "",
+        "group": "12f08883259b40f2",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Oredentlig fix",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "ordentlig_fix",
+        "topicType": "str",
+        "x": 290,
+        "y": 1960,
+        "wires": [
+            [
+                "ea3466f4bcd478ad"
+            ]
+        ]
+    },
+    {
+        "id": "26f5f5d747f642a1",
+        "type": "ui_gauge",
+        "z": "9544cff3487df065",
+        "name": "",
+        "group": "aedf344aa5990a36",
+        "order": 2,
+        "width": 7,
+        "height": 4,
+        "gtype": "donut",
+        "title": "   ",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#8c8c8c",
+            "#8c8c8c",
+            "#8c8c8c"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 830,
+        "y": 2740,
+        "wires": []
+    },
+    {
+        "id": "eeaf73720b139b37",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Ladestasjon/Verksted_Reperasjonvalg\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 820,
+        "wires": [
+            [
+                "79e07a378dad1d2e"
+            ]
+        ]
+    },
+    {
+        "id": "704ac7fc263864bc",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Ladestasjon/Verksted_Reperasjonvalg\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 940,
+        "wires": [
+            [
+                "79e07a378dad1d2e"
+            ]
+        ]
+    },
+    {
+        "id": "b1b87b628a816a66",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Ladestasjon/Verksted_Filler2\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 740,
+        "wires": [
+            [
+                "79e07a378dad1d2e"
+            ]
+        ]
+    },
+    {
+        "id": "a7b47b6428c4b83a",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Ladestasjon/Verksted_Filler2\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 1020,
+        "wires": [
+            [
+                "79e07a378dad1d2e"
+            ]
+        ]
+    },
+    {
+        "id": "a60b85685315ea29",
+        "type": "switch",
+        "z": "9544cff3487df065",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 830,
+        "y": 2340,
+        "wires": [
+            [
+                "359946b95f5808a2",
+                "7c5f457035e5f25e"
+            ],
+            [
+                "4235a67b040d5851",
+                "4aabb63c0974ab87"
+            ]
+        ]
+    },
+    {
+        "id": "61eda2ba3e14835b",
+        "type": "ui_ui_control",
+        "z": "9544cff3487df065",
+        "name": "",
+        "events": "all",
+        "x": 1140,
+        "y": 2340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "359946b95f5808a2",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Ladestasjon/Verksted_reperasjonProsses\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 2320,
+        "wires": [
+            [
+                "61eda2ba3e14835b"
+            ]
+        ]
+    },
+    {
+        "id": "4235a67b040d5851",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Ladestasjon/Verksted_reperasjonProsses\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 2360,
+        "wires": [
+            [
+                "61eda2ba3e14835b"
+            ]
+        ]
+    },
+    {
+        "id": "4aabb63c0974ab87",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Ladestasjon/Verksted_Filler2\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 2400,
+        "wires": [
+            [
+                "61eda2ba3e14835b"
+            ]
+        ]
+    },
+    {
+        "id": "7c5f457035e5f25e",
+        "type": "change",
+        "z": "9544cff3487df065",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Ladestasjon/Verksted_Filler2\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 2280,
+        "wires": [
+            [
+                "61eda2ba3e14835b"
+            ]
+        ]
+    },
+    {
+        "id": "c07fcfc74248ebfb",
+        "type": "inject",
+        "z": "9544cff3487df065",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fullmessage",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 420,
+        "y": 2220,
+        "wires": [
+            [
+                "a60b85685315ea29"
+            ]
+        ]
+    },
+    {
+        "id": "cdf4ca1bb31f0489",
+        "type": "inject",
+        "z": "9544cff3487df065",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fullmessage",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 420,
+        "y": 2260,
+        "wires": [
+            [
+                "a60b85685315ea29"
+            ]
+        ]
+    },
+    {
+        "id": "525020b9f068ddba",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 50",
+        "func": "if (msg.topic == \"ladestasjon\"){\n    if (msg.payload.current_Charge){\n        msg.payload = msg.payload.current_Charge;\n        return msg;\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "59321a080bc0fbc5"
+            ]
+        ]
+    },
+    {
+        "id": "c2c88d2bdabf020f",
+        "type": "mqtt out",
+        "z": "9544cff3487df065",
+        "name": "",
+        "topic": "saldo",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 1150,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e7607c7b2babda09",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 51",
+        "func": "if (msg.topic == \"ladestasjon\"){\n    msg.payload = msg.payload.current_charge;\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1600,
+        "wires": [
+            [
+                "d93f69055bb68002"
+            ]
+        ]
+    },
+    {
+        "id": "204459a79d67b649",
+        "type": "inject",
+        "z": "9544cff3487df065",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 370,
+        "y": 1120,
+        "wires": [
+            [
+                "89789889bc93cdeb"
+            ]
+        ]
+    },
+    {
+        "id": "5f0d64f4dfa2ba04",
+        "type": "inject",
+        "z": "9544cff3487df065",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 370,
+        "y": 1160,
+        "wires": [
+            [
+                "89789889bc93cdeb"
+            ]
+        ]
+    },
+    {
+        "id": "1de9b639e73fec2e",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "Filter",
+        "func": "if (msg.topic == \"ladestasjon\") {\n    if (msg.payload.UID){\n        return msg;\n    }\n}\n//blokkerer alt som ikke har msg.payload.current_Charge, for å ungå å få en \"NaN\" verdi",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 880,
+        "wires": [
+            [
+                "10afaf499b2f26b0"
+            ]
+        ]
+    },
+    {
+        "id": "b5c8ba2c6f350532",
+        "type": "comment",
+        "z": "9544cff3487df065",
+        "name": "Hide/Show for ladeprosses (filler og ladeprosses)",
+        "info": "",
+        "x": 660,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "91a747b414c5b80a",
+        "type": "comment",
+        "z": "9544cff3487df065",
+        "name": "Hide/Show for lade/verkstedsvalg, om bil er der eller ikke",
+        "info": "",
+        "x": 650,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "2eb3754510ae2ba2",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 53",
+        "func": "if (msg.topic == \"quick_fix\"){\n    flow.set(\"wanted_batteryHealth\", msg.payload);\n    flow.set(\"fixType\", msg.topic);\n    return msg;\n}\nif (msg.topic == \"ordentlig_fix\") {\n    flow.set(\"wanted_batteryHealth\", msg.payload);\n    flow.set(\"fixType\", msg.topic);\n    return msg;\n}\nif (msg.topic == \"battery_swap\") {\n    flow.set(\"wanted_batteryHealth\", msg.payload);\n    flow.set(\"fixType\", msg.topic);\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 2000,
+        "wires": [
+            [
+                "8475782bdebabbcc"
+            ]
+        ]
+    },
+    {
+        "id": "35fb8fbaad4baa8d",
+        "type": "random",
+        "z": "9544cff3487df065",
+        "name": "",
+        "low": "5",
+        "high": "20",
+        "inte": "true",
+        "property": "payload",
+        "x": 440,
+        "y": 1920,
+        "wires": [
+            [
+                "2eb3754510ae2ba2"
+            ]
+        ]
+    },
+    {
+        "id": "ea3466f4bcd478ad",
+        "type": "random",
+        "z": "9544cff3487df065",
+        "name": "",
+        "low": "30",
+        "high": "50",
+        "inte": "true",
+        "property": "payload",
+        "x": 440,
+        "y": 1960,
+        "wires": [
+            [
+                "2eb3754510ae2ba2"
+            ]
+        ]
+    },
+    {
+        "id": "537955c727c74da1",
+        "type": "comment",
+        "z": "9544cff3487df065",
+        "name": "Annet system enn med lading",
+        "info": "",
+        "x": 320,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "afbf1a346e274c69",
+        "type": "comment",
+        "z": "9544cff3487df065",
+        "name": "Angir hvor mye man øsnker batteri helsen skal øke med",
+        "info": "",
+        "x": 340,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "8475782bdebabbcc",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 54",
+        "func": "var msg1;\n\nvar saldo = global.get(\"saldo\");\nvar fixType = flow.get(\"fixType\")\nvar brokenBattery = global.get(\"brokenBattery\") || false;\n\n//når bekreft knappen blir trykket, sjekker om det er nok penger på konto\n\nif (fixType == \"quick_fix\"){\n    if (brokenBattery == false){\n        if (saldo >= 200) {\n            flow.set(\"new_saldo\", (saldo - 200));\n            flow.set(\"canBatterySwap\", false)\n            msg.payload = \"200\";\n            msg.enabled = true\n            return [msg, null];\n        } else if (saldo < 200) {\n            msg.payload = \"200\";\n            msg.enabled = false\n            msg1 = { payload: \"Du har for lav saldo for å betale!\" };\n            return [null, msg1];\n        }\n    } else {\n        msg.payload = \"200\";\n        msg.enabled = false\n        msg1 = { payload: \"Batteriet ditt er ødelagt, det må byttes helt!\" };\n        return [null, msg1];\n    }\n}\n\nif (fixType == \"ordentlig_fix\") {\n    if (brokenBattery == false) {\n        if (saldo >= 300) {\n            flow.set(\"new_saldo\", (saldo - 300));\n            flow.set(\"canBatterySwap\", false)\n            msg.payload = \"300\";\n            msg.enabled = true\n            return [msg, null];\n        } else if (saldo < 300) {\n            msg.payload = \"300\";\n            msg.enabled = false\n            msg1 = { payload: \"Du har for lav saldo for å betale!\" };\n            return [null, msg1];\n        }\n    } else {\n        msg.payload = \"200\";\n        msg.enabled = false\n        msg1 = { payload: \"Batteriet ditt er ødelagt, det må byttes helt!\" };\n        return [null, msg1];\n    }\n}\n\nif (fixType == \"battery_swap\") {\n    if (brokenBattery == false || brokenBattery == true){\n        if (saldo >= 700) {\n            flow.set(\"new_saldo\", (saldo - 700));\n            flow.set(\"canBatterySwap\", true)\n            msg.payload = \"700\";\n            msg.enabled = true\n            return [msg, null];\n        } else if (saldo < 700) {\n            msg.payload = \"700\";\n            msg.enabled = false\n            msg1 = { payload: \"Du har for lav saldo for å betale!\" };\n            return [msg, msg1];\n        }\n    }\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 2000,
+        "wires": [
+            [
+                "ec4f8e6d8ea31d62",
+                "e94c3a6c930bfb7d",
+                "2ddc71c8cc501351"
+            ],
+            [
+                "923237e6cc9e12d2"
+            ]
+        ]
+    },
+    {
+        "id": "f965b8ca30c62970",
+        "type": "comment",
+        "z": "9544cff3487df065",
+        "name": "publiserer den nye helse værdien på mqtt, som på dashbord blir tatt in og oppdatert.",
+        "info": "",
+        "x": 930,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "6f27ba95c86bcdf6",
+        "type": "mqtt out",
+        "z": "9544cff3487df065",
+        "name": "",
+        "topic": "saldo",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 1190,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "923237e6cc9e12d2",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "Verksted, for få penger",
+        "mode": "link",
+        "links": [
+            "1e81649dc0b8806d"
+        ],
+        "x": 905,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "ec4f8e6d8ea31d62",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 56",
+        "func": "var msg1;\nvar msg2;\nvar new_batteryHealth;\n\nvar canBatterySwap = flow.get(\"canBatterySwap\");\nvar new_saldo = flow.get(\"new_saldo\");\nvar batteryHealth = global.get(\"batteryHealth\");\nvar wanted_batteryHealth = flow.get(\"wanted_batteryHealth\");\n\n\n//finner ny batteryHealth, hvis den er over 100 settes den lik 100\nif (msg.topic !== \"send\") {\n    new_batteryHealth = (batteryHealth + wanted_batteryHealth);\n    context.set(\"new_batteryHealth\",(batteryHealth + wanted_batteryHealth));\n    if (new_batteryHealth > 100) {\n        context.set(\"new_batteryHealth\", 100);\n    }\n}\n\nnew_batteryHealth = context.get(\"new_batteryHealth\")\n\nif (msg.topic == \"send\") {\n    if(canBatterySwap == true){\n        global.set(\"batterySwapped\", true);\n        global.set(\"brokenBattery\", false);\n        global.set(\"current_Charge\", 100);\n    }\n    global.set(\"ongoingFix\", true);\n    global.set(\"batteryHealth\", new_batteryHealth);\n    msg.payload = { \"saldo\": new_saldo, \"old\": batteryHealth, \"want\": wanted_batteryHealth};\n    msg1 = {\"enabled\": false};\n    msg2 = { \"payload\": 0 };\n\n    return [msg, msg1, msg2];\n}",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 1920,
+        "wires": [
+            [
+                "6f27ba95c86bcdf6",
+                "18815169360a1687"
+            ],
+            [
+                "074dd0f1e43a41b9"
+            ],
+            [
+                "e9417f87808fcc2a"
+            ]
+        ]
+    },
+    {
+        "id": "f6b63f599c3899ed",
+        "type": "link in",
+        "z": "9544cff3487df065",
+        "name": "verksted, bekreft",
+        "links": [
+            "e94c3a6c930bfb7d",
+            "074dd0f1e43a41b9"
+        ],
+        "x": 675,
+        "y": 1920,
+        "wires": [
+            [
+                "b463f86ec7f868dc"
+            ]
+        ]
+    },
+    {
+        "id": "e94c3a6c930bfb7d",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 13",
+        "mode": "link",
+        "links": [
+            "f6b63f599c3899ed"
+        ],
+        "x": 995,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "074dd0f1e43a41b9",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 14",
+        "mode": "link",
+        "links": [
+            "f6b63f599c3899ed"
+        ],
+        "x": 1135,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "fe2c8b3587d56b3f",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 57",
+        "func": "msg.payload = { \"chargePrice\": \"\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1360,
+        "wires": [
+            [
+                "c9fac4931b9457c5"
+            ]
+        ]
+    },
+    {
+        "id": "c9fac4931b9457c5",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 15",
+        "mode": "link",
+        "links": [
+            "203223108453d1d4"
+        ],
+        "x": 685,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "203223108453d1d4",
+        "type": "link in",
+        "z": "9544cff3487df065",
+        "name": "Pris for lading",
+        "links": [
+            "c9fac4931b9457c5"
+        ],
+        "x": 1015,
+        "y": 620,
+        "wires": [
+            [
+                "712ab1b7bf84a3de"
+            ]
+        ]
+    },
+    {
+        "id": "daaee52e581113de",
+        "type": "mqtt out",
+        "z": "9544cff3487df065",
+        "name": "",
+        "topic": "ladestasjon",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 490,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "18815169360a1687",
+        "type": "mqtt out",
+        "z": "9544cff3487df065",
+        "name": "",
+        "topic": "verksted",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 1200,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "93b9da33f2f799f8",
+        "type": "mqtt in",
+        "z": "9544cff3487df065",
+        "name": "",
+        "topic": "verksted",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 840,
+        "y": 2100,
+        "wires": [
+            [
+                "5a53ef0e1e59ce6a"
+            ]
+        ]
+    },
+    {
+        "id": "5a53ef0e1e59ce6a",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 58",
+        "func": "if (msg.topic == \"verksted\"){\n    if (msg.payload.batteryHealth){\n        msg.payload = msg.payload.batteryHealth;\n        return msg;\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 2100,
+        "wires": [
+            [
+                "f3095d83feb14f10"
+            ]
+        ]
+    },
+    {
+        "id": "6de29daafcfbfb22",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 60",
+        "func": "var fixTilstand = global.get(\"ongoingFix\") || false;\n\nif (fixTilstand == true) {\n    msg.payload = true;\n    return msg;\n} else {\n    msg.payload = false;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 2340,
+        "wires": [
+            [
+                "a60b85685315ea29"
+            ]
+        ]
+    },
+    {
+        "id": "a406ba6195b51dd7",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 61",
+        "func": "if (msg.topic == \"verksted\") {\n    context.set(\"state\", msg.finnishedstate);\n}\n\nvar finnishedstate = context.get(\"state\") || false;\n\nif (finnishedstate == true){\n    global.set(\"ongoingFix\", false);\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 2340,
+        "wires": [
+            [
+                "6de29daafcfbfb22"
+            ]
+        ]
+    },
+    {
+        "id": "7d0c26c07417157b",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 62",
+        "func": "var msg1;\nvar msg2;\nvar count = msg.payload;\ncount = count + 1;\n\nif (count <= 100){\n    msg.payload = count;\n    return [msg, null, null];\n} else if (count > 100){\n    global.set(\"batterySwapped\", false);\n    msg1 = { finnishedstate: true, payload: 0, topic: \"verksted\" };\n    msg2 = { payload: \"Reperasjon ferdig!\"};\n    return [null, msg1, msg2];\n}",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 2600,
+        "wires": [
+            [
+                "8e983cd5bac7b8da"
+            ],
+            [
+                "1eaa1969238c364c",
+                "268fa7320c54c368"
+            ],
+            [
+                "181318455cf9149a"
+            ]
+        ]
+    },
+    {
+        "id": "8e983cd5bac7b8da",
+        "type": "delay",
+        "z": "9544cff3487df065",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 2600,
+        "wires": [
+            [
+                "b7a41c9321c1436b",
+                "26f5f5d747f642a1"
+            ]
+        ]
+    },
+    {
+        "id": "f7957af282b27511",
+        "type": "link in",
+        "z": "9544cff3487df065",
+        "name": "link in 11",
+        "links": [
+            "b7a41c9321c1436b",
+            "e9417f87808fcc2a"
+        ],
+        "x": 315,
+        "y": 2600,
+        "wires": [
+            [
+                "7d0c26c07417157b"
+            ]
+        ]
+    },
+    {
+        "id": "b7a41c9321c1436b",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 16",
+        "mode": "link",
+        "links": [
+            "f7957af282b27511"
+        ],
+        "x": 775,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "1eaa1969238c364c",
+        "type": "delay",
+        "z": "9544cff3487df065",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 2540,
+        "wires": [
+            [
+                "3d6fd38781f4ab45",
+                "a406ba6195b51dd7"
+            ]
+        ]
+    },
+    {
+        "id": "268fa7320c54c368",
+        "type": "delay",
+        "z": "9544cff3487df065",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "4",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 2640,
+        "wires": [
+            [
+                "26f5f5d747f642a1"
+            ]
+        ]
+    },
+    {
+        "id": "181318455cf9149a",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 17",
+        "mode": "link",
+        "links": [
+            "1e81649dc0b8806d"
+        ],
+        "x": 595,
+        "y": 2680,
+        "wires": []
+    },
+    {
+        "id": "3d6fd38781f4ab45",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 63",
+        "func": "msg.payload = \"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 2540,
+        "wires": [
+            [
+                "66fd90660901d9e0"
+            ]
+        ]
+    },
+    {
+        "id": "66fd90660901d9e0",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 18",
+        "mode": "link",
+        "links": [
+            "3a25c07895f7c244"
+        ],
+        "x": 775,
+        "y": 2540,
+        "wires": []
+    },
+    {
+        "id": "3a25c07895f7c244",
+        "type": "link in",
+        "z": "9544cff3487df065",
+        "name": "Pris for rep",
+        "links": [
+            "66fd90660901d9e0"
+        ],
+        "x": 1075,
+        "y": 2020,
+        "wires": [
+            [
+                "2ddc71c8cc501351"
+            ]
+        ]
+    },
+    {
+        "id": "e9417f87808fcc2a",
+        "type": "link out",
+        "z": "9544cff3487df065",
+        "name": "link out 19",
+        "mode": "link",
+        "links": [
+            "07917dc7823fa304",
+            "f7957af282b27511"
+        ],
+        "x": 1135,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "07917dc7823fa304",
+        "type": "link in",
+        "z": "9544cff3487df065",
+        "name": "link in 12",
+        "links": [
+            "e9417f87808fcc2a"
+        ],
+        "x": 545,
+        "y": 2380,
+        "wires": [
+            [
+                "6de29daafcfbfb22"
+            ]
+        ]
+    },
+    {
+        "id": "46d8a07993cd3bf4",
+        "type": "mqtt in",
+        "z": "9544cff3487df065",
+        "name": "finnishedstate",
+        "topic": "ladestasjon",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 1200,
+        "wires": [
+            [
+                "819e1fffba6b23f1"
+            ]
+        ]
+    },
+    {
+        "id": "af606b51afb67a3c",
+        "type": "function",
+        "z": "9544cff3487df065",
+        "name": "function 77",
+        "func": "if (msg.topic == \"verksted\") {\n    msg.payload = msg.payload.current_fix;\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 2740,
+        "wires": [
+            [
+                "26f5f5d747f642a1"
+            ]
+        ]
+    },
+    {
+        "id": "36074158ad0244ad",
+        "type": "mqtt in",
+        "z": "9544cff3487df065",
+        "name": "",
+        "topic": "verksted",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 440,
+        "y": 2740,
+        "wires": [
+            [
+                "af606b51afb67a3c"
+            ]
+        ]
+    },
+    {
+        "id": "5d045ba07ab87749",
+        "type": "ui_button",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "group": "3003ecd6e613b681",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Åpne bom",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 700,
+        "wires": [
+            [
+                "a4f1c8cf884ead52"
+            ]
+        ]
+    },
+    {
+        "id": "bfd4eb3d8c266612",
+        "type": "ui_button",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "group": "3003ecd6e613b681",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Trigg alarm",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 640,
+        "wires": [
+            [
+                "a26476fd4080a999"
+            ]
+        ]
+    },
+    {
+        "id": "eff16e49a053cb9a",
+        "type": "ui_button",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "group": "41e249693650a1d4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Åpne bom",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 880,
+        "wires": [
+            [
+                "faf64eecafb9a410"
+            ]
+        ]
+    },
+    {
+        "id": "8a209d0ef43ce1c0",
+        "type": "ui_button",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "group": "41e249693650a1d4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Trigg alarm",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 820,
+        "wires": [
+            [
+                "8a4769162519b17d"
+            ]
+        ]
+    },
+    {
+        "id": "783fca026f82d002",
+        "type": "mqtt in",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "topic": "fullmessage",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 360,
+        "wires": [
+            [
+                "eaa1622291e5c8fc"
+            ]
+        ]
+    },
+    {
+        "id": "eaa1622291e5c8fc",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 82",
+        "func": "if (msg.payload.id == 1){\n    return [msg, null];\n} else if (msg.payload.id == 2){\n    return [null, msg];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "c51255fcba0b7745",
+                "eb80e604db2986b5"
+            ],
+            [
+                "8b5ddc97b0093c6e",
+                "1d1144d2d94ff794"
+            ]
+        ]
+    },
+    {
+        "id": "0600ebfcb0c20cb6",
+        "type": "ui_text",
+        "z": "f42776056cd8d9cf",
+        "group": "3003ecd6e613b681",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Sist handling:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 900,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c51255fcba0b7745",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 83",
+        "func": "if (msg.payload.access == 0){\n    flow.set(\"tid\", 0);\n    msg.payload = \"Alarm ble avløst\";\n    return msg\n} else if (msg.payload.access == 1){\n    flow.set(\"tid\", 0);\n    msg.payload = \"Bom åpnet\";\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "0600ebfcb0c20cb6",
+                "dab9c0d52b4eb987"
+            ]
+        ]
+    },
+    {
+        "id": "d69651993d279f3d",
+        "type": "ui_text",
+        "z": "f42776056cd8d9cf",
+        "group": "41e249693650a1d4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Sist handling:",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 900,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8b5ddc97b0093c6e",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 84",
+        "func": "if (msg.payload.access == 0){\n    flow.set(\"tid2\", 0);\n    msg.payload = \"Alarm ble avløst\";\n    return msg\n} else if (msg.payload.access == 1){\n    flow.set(\"tid2\", 0);\n    msg.payload = \"Bom åpnet\";\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 440,
+        "wires": [
+            [
+                "d69651993d279f3d",
+                "8de2d28210a90b71"
+            ]
+        ]
+    },
+    {
+        "id": "596fad74d8bf5cf0",
+        "type": "ui_text",
+        "z": "f42776056cd8d9cf",
+        "group": "3003ecd6e613b681",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tid siden hendelse(s):",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 920,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b48f26c2cc77aed5",
+        "type": "ui_text",
+        "z": "f42776056cd8d9cf",
+        "group": "41e249693650a1d4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tid siden hendelse(s):",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 920,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "dab9c0d52b4eb987",
+        "type": "delay",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 220,
+        "wires": [
+            [
+                "f8d92b7f3c317f7c"
+            ]
+        ]
+    },
+    {
+        "id": "f8d92b7f3c317f7c",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 85",
+        "func": "var tid = flow.get(\"tid\");\n\ntid = tid + 1;\nflow.set(\"tid\", tid);\n\nmsg.payload = tid;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 160,
+        "wires": [
+            [
+                "596fad74d8bf5cf0",
+                "dab9c0d52b4eb987"
+            ]
+        ]
+    },
+    {
+        "id": "8de2d28210a90b71",
+        "type": "delay",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 500,
+        "wires": [
+            [
+                "4cf50dd20eb226da"
+            ]
+        ]
+    },
+    {
+        "id": "4cf50dd20eb226da",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 86",
+        "func": "var tid = flow.get(\"tid2\");\n\ntid = tid + 1;\nflow.set(\"tid2\", tid);\n\nmsg.payload = tid;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 540,
+        "wires": [
+            [
+                "8de2d28210a90b71",
+                "b48f26c2cc77aed5"
+            ]
+        ]
+    },
+    {
+        "id": "a26476fd4080a999",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 87",
+        "func": "msg.payload = {\"id\": 1, \"access\": 0};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 640,
+        "wires": [
+            [
+                "210d187f53398af1"
+            ]
+        ]
+    },
+    {
+        "id": "8a4769162519b17d",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 88",
+        "func": "msg.payload = {\"id\": 2, \"access\": 0};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 820,
+        "wires": [
+            [
+                "210d187f53398af1"
+            ]
+        ]
+    },
+    {
+        "id": "a4f1c8cf884ead52",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 89",
+        "func": "msg.payload = {\"id\": 1, \"access\": 1};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 700,
+        "wires": [
+            [
+                "210d187f53398af1"
+            ]
+        ]
+    },
+    {
+        "id": "faf64eecafb9a410",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 90",
+        "func": "msg.payload = {\"id\": 2, \"access\": 1};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 880,
+        "wires": [
+            [
+                "210d187f53398af1"
+            ]
+        ]
+    },
+    {
+        "id": "210d187f53398af1",
+        "type": "mqtt out",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "topic": "control",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 750,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "1d1144d2d94ff794",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 91",
+        "func": "var tableData = flow.get(\"savedData1\") || [];\nvar roundCount = flow.get(\"coun1t\") || 1;\n\ntableData.unshift({\n    \"Arbeidstid\": msg.payload.workTime,\n    \"Penger tjent\": msg.payload.earnings\n});\n\nmsg.payload = tableData;\nroundCount += 1;\nflow.set(\"count1\", roundCount);\nflow.set(\"savedData1\", tableData);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 400,
+        "wires": [
+            [
+                "bd7486572897921a"
+            ]
+        ]
+    },
+    {
+        "id": "bd7486572897921a",
+        "type": "ui_table",
+        "z": "f42776056cd8d9cf",
+        "group": "41e249693650a1d4",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 890,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "eb80e604db2986b5",
+        "type": "function",
+        "z": "f42776056cd8d9cf",
+        "name": "function 92",
+        "func": "var tableData = flow.get(\"savedData2\") || [];\nvar roundCount = flow.get(\"count2\") || 1;\n\ntableData.unshift({\n    \"Tid på skolen\": msg.payload.schoolTime\n});\n\nmsg.payload = tableData;\nroundCount += 1;\nflow.set(\"count2\", roundCount);\nflow.set(\"savedData2\", tableData);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 300,
+        "wires": [
+            [
+                "f5a31f0a90113a50"
+            ]
+        ]
+    },
+    {
+        "id": "f5a31f0a90113a50",
+        "type": "ui_table",
+        "z": "f42776056cd8d9cf",
+        "group": "3003ecd6e613b681",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 890,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "0031f23204e1e47a",
+        "type": "inject",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\": 1, \"access\": 0, \"earnings\": 400, \"workTime\": 4, \"schoolTime\": 5}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "eaa1622291e5c8fc"
+            ]
+        ]
+    },
+    {
+        "id": "96825be7b7164bf7",
+        "type": "inject",
+        "z": "f42776056cd8d9cf",
+        "name": "reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 1130,
+        "y": 340,
+        "wires": [
+            [
+                "83eb830d89583359",
+                "0ef9d36fec971593",
+                "3304d0dba2f687bc",
+                "4e10200b9141b21e"
+            ]
+        ]
+    },
+    {
+        "id": "83eb830d89583359",
+        "type": "change",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "savedData2",
+                "pt": "flow",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1320,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ef9d36fec971593",
+        "type": "change",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "count2",
+                "pt": "flow",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3304d0dba2f687bc",
+        "type": "change",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "savedData1",
+                "pt": "flow",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1320,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e10200b9141b21e",
+        "type": "change",
+        "z": "f42776056cd8d9cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "count1",
+                "pt": "flow",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    }
+]
